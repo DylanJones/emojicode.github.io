@@ -3,6 +3,10 @@
 Emojicode offers an API that allows you to implement methods in another
 language.
 
+>!N To call C libraries, you do not need this API: declare the C functions
+>!N with 🎍🌊, as described in [Calling C with 🎍🌊](c.html). This API is for
+>!N native code that works with Emojicode objects directly.
+
 >!H Make sure you have read everything about [Packages](../reference/packages.html).
 
 ## Basics

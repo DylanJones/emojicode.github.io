@@ -198,3 +198,19 @@ This example is taken from the allegro package:
 🔗
 ```
 
+A link hint names a library, which is linked with `-l`. If a hint starts with
+`-`, it is passed to the linker as it is written, which is how to add search
+paths or frameworks:
+
+```
+🔗 🔤sqlite3🔤 🔤-L/opt/homebrew/lib🔤 🔤-framework Foundation🔤 🔗
+```
+
+A hint that names a C, C++ or Objective-C source file (`.c`, `.cc`, `.cpp`,
+`.m`) or an object file (`.o`), relative to the document, is compiled and
+linked into the program, or added to the archive of the package:
+
+```
+🔗 🔤helpers.c🔤 🔗
+```
+
