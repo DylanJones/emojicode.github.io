@@ -166,7 +166,7 @@ call `ejcInit(argc, argv)` before it calls into Emojicode.
 
 ## Example: SQLite
 
-The Emojicode repository contains
-[a wrapper around SQLite](https://github.com/emojicode/emojicode/tree/master/examples/sqlite)
+The Emojicode repository (this fork) contains
+[a wrapper around SQLite](https://github.com/DylanJones/emojicode/tree/master/examples/sqlite)
 written in Emojicode with the features of this guide, and a program that runs
 SQL queries with it.
