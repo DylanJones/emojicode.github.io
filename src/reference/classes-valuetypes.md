@@ -1,5 +1,9 @@
 # Classes & Value Types
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Emojicode features three kind of types that feature characteristics of
 object-orientation: Classes, Value Types and Enumerations. This chapter is soley
 dedicated to classes and value types. A [separate chapter](enums.html) is
@@ -106,6 +110,24 @@ outside but only in initializers and methods. If you want to access instance
 variables from outside you have to write getters and setters. Instance variables
 are also kept private from subclasses.
 
+As the instance variables of a value type are stored in the value itself, a
+value type cannot have an instance variable of its own type, not even an
+optional one or one of another value type that contains it. Such a type would be
+infinitely large, so the compiler rejects it:
+
+```!
+🕊 🌲 🍇
+  🖍🆕 value 🔢
+  🖍🆕 left 🍬🌲
+  🖍🆕 right 🍬🌲
+
+  🆕 🍼 value 🔢 🍇🍉
+🍉
+```
+
+Use a class for recursive data structures like this one, as instances of
+classes are stored by reference.
+
 ### Default Initialization Value
 
 You can also specify a value to which an instance variable will be initialized:
@@ -128,13 +150,13 @@ We have summarized the syntax here as it is a great deal of definitions and
 we didn’t want to clutter the previous sections.
 
 ```syntax
-$type-definition$-> [$documentation-comment$] [🌍] [🎍🛢] [🔏] [📻] $type-definition-main$
+$type-definition$-> [$documentation-comment$] [🌍] [🎍🛢] [🎍🌊] [🔏] [📻] $type-definition-main$
 $type-definition-main$-> $class$ | $value-type$ | $protocol$ | $enum$
 $class$-> 🐇 $type-identifier$ [$generic-parameters$] [$superclass$] $type-body$
 $type-body$-> 🍇 $type-body-declarations$ 🍉
 $type-body-declarations$-> $type-body-declaration$ | $type-body-declaration$ $type-body-declarations$
 $type-body-declaration$-> $type-body-attributes$ $type-body-declaration-main$
-$type-body-attributes$-> [$documentation-comment$] [🥯] [⚠️] [🔏] [✒️] [🐇] [☣️] [🖍] [🔑] [🎍🥡] [$access-level$]
+$type-body-attributes$-> [$documentation-comment$] [🥯] [⚠️] [🔏] [✒️] [🎍🌊] [🐇] [☣️] [🖍] [🔑] [🎍🥡] [$access-level$]
 $type-body-declaration-main$-> $instance-variable-declaration$ | $method$ | $initializer$
 $type-body-declaration-main$-> $protocol-conformance$ | $enum-value$
 $type-body-declaration-main$-> $deinitializer$
@@ -148,6 +170,9 @@ $init-parameter$-> [🎍🥡] [🍼] $variable$ $type$
 $body$-> $block$ | $external-link-name$
 $access-level$-> 🔓 | 🔒 | 🔐
 ```
+
+🎍🌊 before 🕊 makes a value type a C struct, and 🎍🌊 before a ☣️ type method
+makes it a C function. Both are explained in [Calling C with 🎍🌊](../guides/c.html).
 
 ## Initializers
 
@@ -636,3 +661,6 @@ You can attribute a method or an initializer with 🥯, which indicates to the
 compiler that it could be advantegous to inline the method. This attribute
 furthermore causes the compiler to include the function body in the interface
 file if one is generated.
+Packages that import the package can therefore
+[specialize](generics.html#specialization) 🥯 methods and initializers that
+are generic or belong to a generic type for the types they use them with.

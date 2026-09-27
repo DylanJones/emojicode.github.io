@@ -1,5 +1,9 @@
 # Threads
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Emojicode offers concurrency, that is doing more than one thing at a time,
 and allows you to create threads, which can each independently execute code.
 
@@ -12,10 +16,13 @@ on the newly created thread.
 For example:
 
 ```
-🆕🧵 🍇
-  😀 🔤I execute on a different thread.🔤
+🆕🧵 🍇🎍🥡
+  😀 🔤I execute on a different thread.🔤❗️
 🍉❗️
 ```
+
+The closure must be [escaping](callables.html#capturing-variables-and-context),
+as the thread may still run it after the 🆕 initializer has returned.
 
 If you wrapped the above into the 🏁 method compiled it into a program, you
 would possibly not see any output. The problem is, that the thread is created
@@ -68,6 +75,15 @@ The output is messed up because all threads are trying to execute
 simultaneously. The order in which a thread will get the opportunity to actually
 print something depends on your hardware as well as many other factors, like
 load factor of the computer.
+
+### Threads That Are Not Joined
+
+You do not have to join every thread. If the last reference to a 🧵 goes away
+before 🛂 was called on it, the thread keeps running in the background until it
+has finished. This is what happens in the very first example of this chapter.
+
+Such threads, however, are terminated when the program exits, even if they have
+not finished their work yet. So join a thread if its work must be completed.
 
 ## Race Conditions and Mutexes
 
@@ -208,6 +224,33 @@ Money, money, money – Must be funny
 Money, money, money – Must be funny
 0
 ```
+
+If a thread should not wait for a mutex that is locked by another thread, it can
+use 🔐 instead of 🔒. 🔐 locks the mutex and returns 👍 if it is not locked,
+and returns 👎 immediately otherwise:
+
+```
+🏁 🍇
+  🆕🔐❗️ ➡️ mutex
+  🔒 mutex❗️
+
+  🆕🧵 🍇🎍🥡
+    ↪️ 🔐 mutex❗️ 🍇
+      😀 🔤Got the mutex🔤❗️
+      🔓 mutex❗️
+    🍉
+    🙅 🍇
+      😀 🔤The mutex is locked, doing something else🔤❗️
+    🍉
+  🍉❗️ ➡️ thread
+  🛂 thread❗️
+
+  🔓 mutex❗️
+🍉
+```
+
+As the main thread holds the mutex while the other thread runs, this prints
+`The mutex is locked, doing something else`.
 
 ## Atomicity of the s Package
 

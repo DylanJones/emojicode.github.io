@@ -1,5 +1,9 @@
 # Control Flow
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Emojicode provides different types of control flow statements that allow you to
 structure the flow of the program.
 
@@ -104,7 +108,7 @@ The compiler then transforms the statement into byte code equivalent to the
 statement rewritten to
 
 ```
-🍡 iterable❗️ ➡️ iterator
+🍡 iterable❗️ ➡️ 🖍🆕 iterator
 🔁 🔽 iterator❓️ 🍇
   🔽 iterator❗️ ➡️ variable
   💭 The provided block is executed here
@@ -115,6 +119,14 @@ where *iteratable* is the instance to iterate over (the result from evaluating
 the expression) and *variable* the variable name provided. Evidently, the
 variable will be of the type that was provided to the generic argument *Element*
 when the type of *iterable* declared its conformance to 🔂🐚Element🍆.
+
+The iterator is stored in a mutable variable, as 🍡’s 🔽❗️ is a
+[🖍 method](protocols.html#mutating-protocol-methods), which advances the
+iterator. This allows iterators to be value types, like the iterators of 🍨 and
+⏩, so that the compiler can turn 🔂 over a list or range into a plain loop. If
+you use an iterator yourself, you must store it in a mutable variable, too, and
+only call 🔽❗️ after 🔽❓ returned 👍. The iterators of 🍨 and ⏩ panic if there
+are no more values.
 
 Let’s take a look at an example:
 
@@ -137,11 +149,15 @@ inferred.
 
 The s package provides a type ⏩, representing a range. A range is an immutable
 sequence of integers and is defined by three values:
-*start*, *stop* and *step*.
+*start*, *stop* and *step*. If you create a range without a step, the step
+is 1.
 
 If `step` is positive, every number `f(x) = start + x * step`
 that matches the constraint `start ≤ f(x) < stop` is an element of the range. If
 `step` is negative the constraint `stop < f(x) ≤ start` applies instead.
+
+A range without a step therefore always counts up and is empty if `stop` is not
+greater than `start`. To count down, provide a negative step.
 
 Ranges are helpful in if you need to repeat
 something for a specific number of times:
@@ -156,6 +172,10 @@ something for a specific number of times:
 🍉
 
 🔂 i 🆕⏩ 10 0❗️ 🍇
+  😀 🔡 i❗️❗️  💭 Prints nothing, as the range is empty.
+🍉
+
+🔂 i 🆕⏩ 10 0 -1❗️ 🍇
   😀 🔡 i❗️❗️  💭 Prints numbers 10 through 1 (including).
 🍉
 

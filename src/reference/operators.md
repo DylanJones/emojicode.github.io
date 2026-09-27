@@ -1,5 +1,9 @@
 # Operators
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Emojicode defines a set of operators.
 
 ```syntax
@@ -91,6 +95,11 @@ similar to a method. This is an example from the s package’s 📇 type:
 
 The difference to a normal method declaration is simply that instead of an mood
 (❗️ or ❓) an operator appears. Furthermore, no name is specified.
+
+Protocols can require operators as well. The s package’s 📈 protocol, for
+instance, requires the arithmetic operators and comparisons, which lets
+[generic code compute with numbers](generics.html#numbers-in-generic-code) of
+any of the types 🔢, 💯 and 💧.
 
 ## Identity Check
 

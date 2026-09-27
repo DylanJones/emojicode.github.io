@@ -1,9 +1,21 @@
 # Inheritance and Overriding
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Inheritance allows instances of a more concrete class to be treated like
 instances of a less concrete class. When you subclass a class, the subclass
 inherits all methods and type methods. Initializers are only inherited under
 special conditions.
+
+A class cannot inherit from itself, neither directly nor through its
+superclasses. The compiler rejects this, for example:
+
+```!
+🐇 🐟 🐠 🍇 🍉
+🐇 🐠 🐟 🍇 🍉
+```
 
 ## Initializer Inheritance
 
@@ -113,6 +125,28 @@ The following example will raise a compiler error as 🐟 is attributed with �
 
 🍉
 ```
+
+Likewise, a method attributed with 🔏 cannot be overridden by subclasses:
+
+```!
+🐇 🐟 🍇
+  🆕 🍇🍉
+
+  🔏 ❗️ 🙋 🍇
+    😀 🔤I’m a fish.🔤❗️
+  🍉
+🍉
+
+🐇 🐡 🐟 🍇
+  ✒️ ❗️ 🙋 🍇
+    😀 🔤I’m a blowfish.🔤❗️
+  🍉
+🍉
+```
+
+Methods of final classes and 🔏 methods are called directly instead of being
+looked up at run time. If they are generic or belong to a generic class, they
+can also be [specialized](generics.html#specialization).
 
 ## Promises
 

@@ -1,5 +1,9 @@
 # Safe and Unsafe Code
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Emojicode is designed to make your programs safe.
 
 But what exactly does this mean? In contrast to other programming languages,
@@ -18,8 +22,36 @@ in the following situations.
 
 - Unwrapping an optional without a value or an error that contains an error
 - Accessing an array out of bounds
+- Calling 🔽❗️ on an iterator of a list or range that has no more values
 - A call to the panic method 🤯
 - The program runs out of memory (rare)
+
+### Panicking Yourself
+
+You can make your program panic by calling the type method 🤯 of 💻 with a
+message that explains what went wrong. The compiler knows that 🤯 never returns.
+Like ↩️, it ends a block, so a method that returns a value can end with 🤯
+without returning anything afterwards, and code after it is reported as never
+executed:
+
+```
+🕊 🧰 🍇
+  🐇❗️ 🌡 celsius 🔢 ➡️ 🔡 🍇
+    ↪️ celsius ◀️ 0 🍇
+      ↩️ 🔤freezing🔤
+    🍉
+    🙅↪️ celsius ◀️ 100 🍇
+      ↩️ 🔤liquid🔤
+    🍉
+    🤯🐇💻 🔤Water should not be this hot🔤❗️
+  🍉
+🍉
+
+🏁 🍇
+  😀 🌡🕊🧰 20❗️❗️  💭 Prints liquid
+  😀 🌡🕊🧰 120❗️❗️  💭 Panics
+🍉
+```
 
 ## Unsafe Code
 

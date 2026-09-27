@@ -1,5 +1,9 @@
 # Packages
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 ## What Is a Package?
 
 Emojicode divides code into packages. A package is a unit of code
@@ -160,11 +164,17 @@ of a function body. For example:
 $external-link-name$-> 📻 $string-literal$
 ```
 
-You can then implement the function in e.g. C++. Then compile these
-implementations to object files as well and pack them into the package archive.
-It’s important that the implementations conform to the C calling convention.
+You can then implement the function in e.g. C++. The easiest way to compile
+these implementations is to list their source files as
+[link hints](#specifying-shared-libraries-to-link): the compiler then compiles
+them and links them into the program or adds them to the package archive. It’s
+important that the implementations conform to the C calling convention.
 
-Learn more about implementing functins in C++ in [this guide](/docs/guides/api.html).
+Learn more about implementing functions in C++ in [this guide](../guides/api.html).
+
+To call functions of a C library directly, without writing any C or C++, or to
+let C code call Emojicode, declare the C functions with 🎍🌊 instead, as
+described in [Calling C with 🎍🌊](../guides/c.html).
 
 ## Specifying Shared Libraries to Link
 
@@ -177,8 +187,11 @@ level:
 
 ```syntax
 $link-hints$-> 🔗 $link-hints-list$ 🔗
-$link-hints-list$-> $string-literal$ | $link-hints-list$
+$link-hints-list$-> $string-literal$ [$link-hints-list$]
 ```
+
+A package, and a program, can only have one list of link hints, but it may be
+in any of its documents.
 
 This example is taken from the allegro package:
 
@@ -198,3 +211,37 @@ This example is taken from the allegro package:
 🔗
 ```
 
+Each string is one of the following:
+
+- **A library**, like `🔤allegro🔤` above, which is passed to the linker as
+  `-lallegro`. A hint is split at whitespace, and only the first word is taken
+  as a library name, so `🔤ssl -lcrypto🔤` links both libraries.
+- **Linker flags**, if the hint starts with `-`. Such a hint is passed to the
+  linker as written (split at whitespace), for instance
+  `🔤-framework Foundation🔤` or `🔤-L/opt/sqlite/lib🔤`.
+- **A native source file**, if the hint is a path without whitespace that ends
+  in `.c`, `.cc`, `.cpp`, `.cxx`, `.m` or `.o`. A relative path is relative
+  to the directory of the document that contains the link hints. The compiler
+  compiles C and Objective-C sources (`.c`, `.m`) with `$CC` (or `cc`) and C++
+  sources with `$CXX` (or `c++`), and uses `.o` files as they are. The objects
+  are linked into the program, or added to the archive of the package.
+
+```
+🔗
+  🔤sqlite3🔤
+  🔤-L/opt/sqlite/lib🔤
+  🔤helpers.c🔤
+🔗
+```
+
+Link hints apply to the program or package that declares them and to every
+program that imports the package. The interface of a package keeps its
+libraries and flags but leaves out its native sources, since their objects
+are already in the package archive.
+
+If the linker fails, for example because a library cannot be found, the
+compiler shows the linker’s output, reports an error and exits with a
+non-zero status.
+
+>!H [Calling C with 🎍🌊](../guides/c.html#linking-c-code) shows how link hints
+>!H are used to call C libraries.
