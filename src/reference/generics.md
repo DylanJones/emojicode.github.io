@@ -1,5 +1,9 @@
 # Generics
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Generics allow you to write code in which you can use a placeholder – variable
 names – instead of an actual type, which will then be substituted with real
 types when you use that code later. This is a really powerful feature and is a
@@ -45,6 +49,93 @@ a generic type parameter. Type constraints are useful as they allow you to
 treat values of a generic type as if they were an instance of the type
 constraint.
 
+A constraint can mention the generic parameters of the same declaration,
+including the parameter it constrains. This is commonly used with generic
+protocols: `T 🧩🐚T🍆` means “T must be a 🧩 of itself”. The protocol can even be
+constrained to itself in its own declaration:
+
+```
+🐊 🧩🐚T 🧩🐚T🍆🍆 🍇
+  ❗️ 🔗 other T ➡️ T
+🍉
+
+🕊 📜 🍇
+  🐊 🧩🐚📜🍆
+  🖍🆕 text 🔡
+
+  🆕 🍼 text 🔡 🍇🍉
+
+  ❗️ 🔗 other 📜 ➡️ 📜 🍇
+    ↩️ 🆕📜 🔤🧲text🧲 🧲📝 other❗️🧲🔤❗️
+  🍉
+
+  ❗️ 📝 ➡️ 🔡 🍇
+    ↩️ text
+  🍉
+🍉
+
+🕊 🧰 🍇
+  🐇❗️ 🔗🐚T 🧩🐚T🍆🍆 parts 🍨🐚T🍆 ➡️ T 🍇
+    🐽 parts 0❗️ ➡️ 🖍🆕 result
+    🔂 i 🆕⏩ 1 📏parts❓❗️ 🍇
+      🔗 result 🐽 parts i❗️❗️ ➡️ 🖍result
+    🍉
+    ↩️ result
+  🍉
+🍉
+
+🏁 🍇
+  🍿 🆕📜 🔤Been🔤❗️ 🆕📜 🔤wishin'🔤❗️ 🆕📜 🔤for you🔤❗️ 🍆 ➡️ words
+  😀 📝 🔗🕊🧰 words❗️❗️❗️  💭 Prints “Been wishin' for you”
+🍉
+```
+
+Because of its constraint, `🔗` can call 🔗 on values of `T` and knows the result
+is a `T` again. Calling it with a type that does not conform, like
+`🔗🕊🧰 🍿 1 2 🍆❗️`, is a compiler error, as 🔢 is no 🧩🐚🔢🍆.
+
+A constraint may also mention another generic parameter, as in
+`🐚A ⚪ B 🍨🐚A🍆🍆`, where `B` must be a list of whatever `A` is.
+
+The s package’s [📈](#numbers-in-generic-code) protocol is declared this way.
+
+### Numbers in Generic Code
+
+🔢, 💯 and 💧 conform to the s package’s 📈 protocol with themselves as
+generic argument, i.e. 🔢 is a `📈🐚🔢🍆`. 📈 requires the arithmetic operators
+➕, ➖, ✖️, ➗ and 🚮 and the comparisons ◀️, ▶️, ◀️🙌 and ▶️🙌. Code that
+constrains a generic parameter to `📈` of itself can therefore compute with
+any of these number types:
+
+```
+🕊 🧮 🍇
+  🐇❗️ 📐🐚T 📈🐚T🍆🍆 a T b T ➡️ T 🍇
+    ↩️ a ✖️ a ➕ b ✖️ b
+  🍉
+
+  🐇❗️ 🔝🐚T 📈🐚T🍆🍆 values 🍨🐚T🍆 ➡️ T 🍇
+    🐽values 0❗️ ➡️ 🖍🆕 largest
+    🔂 value values 🍇
+      ↪️ value ▶️ largest 🍇
+        value ➡️ 🖍largest
+      🍉
+    🍉
+    ↩️ largest
+  🍉
+🍉
+
+🏁 🍇
+  😀 🔡 📐🕊🧮 3 4❗️❗️❗️  💭 25
+  😀 🔡 📐🕊🧮 1.5 2.0❗️ 2❗️❗️  💭 6.25
+  😀 🔡 🔝🕊🧮 🍿 3 9 4 🍆❗️❗️❗️  💭 9
+🍉
+```
+
+Generic code can pass its own generic parameters on as generic arguments,
+explicitly or inferred, to other generic methods and types, as long as they
+satisfy the constraints there. Inside a method generic over `U 📈🐚U🍆`, for
+instance, both `📐🐚U🍆🕊🧮 a b❗️` and `📐🕊🧮 a b❗️` call 📐 with `U` for `T`.
+
 ## Subclassing a Generic Class
 
 Naturally you can subclass a generic class. Like in any other circumstance you
@@ -70,6 +161,32 @@ argument for the superclass:
 Two generic types are only compatible if they were provided with exactly the
 same arguments. So `🍨🐚🔡🍆` is only compatible to `🍨🐚🔡🍆` but not to
 `🍨🐚⚪️🍆` as one might expect.
+
+## Optional Generic Arguments
+
+An optional can be a generic argument, as in `🍯🐚🍬🔢🍆`. Optionals do not nest,
+though: where the generic code uses `🍬T` and `T` is `🍬🔢`, the type is simply
+`🍬🔢`. For instance, 🍯’s 🐽 returns `🍬Element`, which is `🍬🔢` for the
+dictionary below. Therefore it cannot tell a key without a value from a
+missing key; use 🐣 to find out whether a key is present:
+
+```
+🏁 🍇
+  🆕🍯🐚🍬🔢🍆❗️ ➡️ 🖍🆕 ages
+  31 ➡️ 🐽ages 🔤Anna🔤❗️
+  🤷‍♀️ ➡️ 🐽ages 🔤Ben🔤❗️
+
+  ↪️ 🐽ages 🔤Ben🔤❗️ ➡️ age 🍇
+    😀 🔡 age❗️❗️
+  🍉
+  🙅 🍇
+    😀 🔤no age for Ben🔤❗️  💭 Printed, although Ben is in the dictionary
+  🍉
+  ↪️ 🐣ages 🔤Ben🔤❗️ 🍇
+    😀 🔤Ben is in the dictionary🔤❗️
+  🍉
+🍉
+```
 
 ## Generic Methods and Intializers
 
@@ -116,6 +233,33 @@ arguments for you, so we can just write:
 
 and Emojicode will automatically provide `🔡` as generic argument for `A`.
 
+### Closures in Generic Methods
+
+A closure inside a generic method can use the method’s generic parameters just
+like the method’s body can: as types of variables, parameters and return
+values, to instantiate generic types, and to call methods of their
+constraints. This is true for escaping closures too, which can be called after
+the method has returned:
+
+```
+🕊 🧰 🍇
+  🐇❗️ 🖨🐚T ⚪🍆 value T ➡️ 🍇🔢➡️🍨🐚T🍆🍉 🍇
+    ↩️ 🍇🎍🥡 count 🔢 ➡️ 🍨🐚T🍆
+      🆕🍨🐚T🍆❗️ ➡️ 🖍🆕 copies
+      🔂 i 🆕⏩ 0 count❗️ 🍇
+        🐻 copies value❗️
+      🍉
+      ↩️ copies
+    🍉
+  🍉
+🍉
+
+🏁 🍇
+  🖨🕊🧰 🔤hello🔤❗️ ➡️ printer
+  😀 🔡 📏 ⁉️printer 3❗️❓❗️❗️  💭 Prints 3
+🍉
+```
+
 ## Generic Protocols
 
 It’s also possible to define generic protocols. Generic protocols work
@@ -132,13 +276,53 @@ A generic protocol which you might use is 🔂.
 It takes one generic argument `Element` which determines the generic argument
 for the iterator (🍡) the 🍡 method must return.
 
+## Specialization
+
+Generic code is compiled only once for all the types it is used with. To make
+that possible, values of generic parameter types are stored in boxes and
+methods called on them are looked up at run time, which is slower than
+code written for one specific type.
+
+To make generic code as fast as code written for a specific type, the compiler
+*specializes* it: when a generic function is called with generic arguments
+that are all concrete types, like `🍨🐚🔢🍆` rather than `🍨🐚T🍆`, the compiler
+compiles an additional copy of the function for exactly these types. In that
+copy, values are not boxed and methods called on them are called directly, so
+they can be inlined. Calls in a specialized function are specialized in turn.
+A 🔂 loop over a 🍨🐚🔢🍆 in a specialized function, for example, compiles to
+a plain loop over the list’s elements without boxing them.
+
+There is no syntax for this; the compiler decides by itself. It specializes:
+
+- methods, type methods and initializers of value types and enumerations that
+  are generic or belong to a generic type,
+- methods of classes that cannot be overridden, i.e. 🔏 methods and methods of
+  [final classes](inheritance.html#final-classes),
+- generic functions of imported packages whose body is part of the package’s
+  interface, like methods marked [🥯](classes-valuetypes.html#inline).
+
+Methods of classes that can be overridden, initializers and type methods of
+classes, and functions of imported packages that are not inline are always
+used in their generic form.
+
+Specialization never changes what a program does. The generic form of every
+function is still compiled, and the compiler falls back to it whenever
+a specialized copy could behave differently or would not compile. For instance,
+which overload a call in generic code resolves to is decided once for the
+generic code and stays the same in a specialization, even if a more specific
+overload would match the concrete type. Warnings are only reported for the
+generic code.
+
+>!H If your generic code needs to be fast, write it as a method of a value type
+>!H or a 🔏 method, and call it with concrete types.
+
 ## Disabling Generic Dynamism
 
 The decorator 🎍🛢 can be used with a class or value type to disable generic
 dynamism, like in the example below.
 
 ```
-🎍🛢 🔏 🐇 🍧🐚Element ⚪🍆️ 🍇
+🎍🛢 🔏 🐇 🧺🐚Element ⚪🍆️ 🍇
   💭 ...
 🍉
 ```
@@ -149,4 +333,15 @@ with generics, for example. This, however, requires additional time and space.
 In special cases it can thus be useful to disable this feature.
 
 If you disable generic dynamism, casting to this type is no longer possible.
+The code of the type can also no longer do anything that requires knowing at
+run time which type a generic parameter stands for, which the compiler reports
+as “Generic dynamism is disabled in this type”. This includes:
+
+- instantiating another generic type with the parameter, like `🆕🍨🐚Element🍆❗️`
+  or a list literal of `Element` values,
+- taking the size of the parameter with `⚖️Element`,
+- reading or writing values of the parameter in memory with 🧠.
+
+Specialization does not help here, as the generic form of the code is always
+compiled too. 🎍🛢 does not keep the type’s methods from being specialized.
 

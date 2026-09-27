@@ -1,5 +1,9 @@
 # Callables
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Emojicode supports a type called *callables*. Callables are like methods (or
 more generally functions) that can be passed like any other object.
 
@@ -24,6 +28,11 @@ Examples:
 🍇🍉  💭 Takes no arguments and does not return a value.
 🍇🔢➡️🔡🚧🚧🍉  💭 May raise a 🚧
 ```
+
+>!H A callable type written with 🎍🌊 after its 🍇, like `🍇🎍🌊🔶🌊🔢➡️🔶🌊🔢🍉`,
+>!H is a C function pointer, and a closure written `🍇🎍🌊 … 🍉` can be passed
+>!H to C as a callback. See [Callbacks](../guides/c.html#callbacks) in the C
+>!H guide.
 
 ## Calling a Callable
 
@@ -84,7 +93,7 @@ It is a pleasure to welcome the honorable Linda
 
 ### Capturing Variables and Context
 
->!H You should be familiar with [Borrowing and Escaping Use](../reference/classes-valuetypes.html#borrowing-and-escaping-use) before reading this section.
+>!H You should be familiar with [Borrowing and Escaping Use](../reference/memory.html#borrowing-and-escaping-use) before reading this section.
 
 Let’s take a look at this example:
 

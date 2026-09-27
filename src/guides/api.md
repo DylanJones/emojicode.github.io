@@ -1,9 +1,18 @@
 # Foreign Function Interface and the C++ API
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 Emojicode offers an API that allows you to implement methods in another
 language.
 
 >!H Make sure you have read everything about [Packages](../reference/packages.html).
+
+>!H To call functions of a C library, to pass C structs or callbacks to C, or
+>!H to let C code call Emojicode, you do not need this API: declare the C
+>!H functions with 🎍🌊 as described in [Calling C with 🎍🌊](c.html). This
+>!H API is for native code that works with Emojicode objects themselves.
 
 ## Basics
 
@@ -21,7 +30,10 @@ it can assume that when linking a function named `catsimulatorMeow` will be
 available that matches the declaration.
 
 Furthermore, the compiler expects this function to be callable via the C
-calling convention.
+calling convention. Unlike a [🎍🌊 function](c.html), however, it receives
+the arguments the way Emojicode passes them: depending on the kind of
+function, there are [additional arguments](#function-signatures), and objects
+and other Emojicode values are passed as they are represented at run time.
 
 This means that you can theoretically implement that method in any language
 you want as you can meet these requirements. Yet, if you need a little
@@ -48,6 +60,20 @@ The method as we declared it in Emojicode does neither take arguments nor
 does it return a value. So we used `void` as the return type in C++. Our
 method, however, does take an argument of type `runtime::ClassInfo*`.
 This is because a type method in a class has the class as its context.
+
+If this code is in a file named `meow.cpp` next to the Emojicode file, a link
+hint makes the compiler compile it with `$CXX` (or `c++`) and link it into
+the program, or add it to the archive of a package:
+
+```
+🔗 🔤meow.cpp🔤 🔗
+```
+
+The headers are installed to `/usr/local/include/emojicode` by default. If
+they are somewhere your C++ compiler does not search, add the directory to
+`$CXX`, as in `CXX="c++ -I/opt/emojicode/include" emojicodec cat.emojic`. See
+[Specifying Shared Libraries to Link](../reference/packages.html#specifying-shared-libraries-to-link)
+for all kinds of link hints.
 
 ## Function Signatures
 
@@ -206,7 +232,7 @@ extern "C" runtime::Real sRealSin(runtime::Real *real)
 
 ## Borrowing and Escaping Use
 
->!N Familiarize yourself with [Borrowing and Escaping Use](../reference/classes-valuetypes.html#borrowing-and-escaping-use).
+>!N Familiarize yourself with [Borrowing and Escaping Use](../reference/memory.html#borrowing-and-escaping-use).
 
 If you let a value escape in a method or initializer you implement in C++ it is
 crucial that you attribute the argument with 🎍🥡. If you let the callee itself
@@ -437,7 +463,9 @@ No. Not at this time.
 
 ## How to Link to Shared Libraries?
 
-See [Specifying Shared Libaries To Link](/docs/reference/packages.html#specifying-shared-libaries-to-link).
+See [Specifying Shared Libraries to Link](../reference/packages.html#specifying-shared-libraries-to-link).
+Link hints can also pass flags to the linker and compile C, C++ and
+Objective-C sources.
 
 ## How Do I Do …?
 

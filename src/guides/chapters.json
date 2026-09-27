@@ -1,7 +1,9 @@
 [
   "install.md",
   "compile-and-run.md",
+  "editors.md",
   "input-methods.md",
   "yarn.md",
-  "api.md"
+  "api.md",
+  "c.md"
 ]

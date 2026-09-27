@@ -1,5 +1,5 @@
 {
-    "documentation": "\n  Emojicode’s standard library.\n\n  See [The s package](https://www.emojicode.org/docs/reference/the-s-package.html)\n  for an introduction.\n",
+    "documentation": "\n  Emojicode’s standard library.\n",
     "types": [
         {
             "type": "Value Type",
@@ -75,6 +75,17 @@
                 {
                     "package": "s",
                     "name": "😛",
+                    "arguments": [
+                        {
+                            "package": "s",
+                            "name": "🔢",
+                            "arguments": []
+                        }
+                    ]
+                },
+                {
+                    "package": "s",
+                    "name": "📈",
                     "arguments": [
                         {
                             "package": "s",
@@ -945,6 +956,17 @@
                 },
                 {
                     "package": "s",
+                    "name": "📈",
+                    "arguments": [
+                        {
+                            "package": "s",
+                            "name": "💯",
+                            "arguments": []
+                        }
+                    ]
+                },
+                {
+                    "package": "s",
                     "name": "↘🔸🔡",
                     "arguments": []
                 }
@@ -1621,6 +1643,17 @@
                 },
                 {
                     "package": "s",
+                    "name": "📈",
+                    "arguments": [
+                        {
+                            "package": "s",
+                            "name": "💧",
+                            "arguments": []
+                        }
+                    ]
+                },
+                {
+                    "package": "s",
                     "name": "↘🔸🔡",
                     "arguments": []
                 }
@@ -2123,7 +2156,7 @@
                 {
                     "accessLevel": "🔓",
                     "unsafe": false,
-                    "mutating": false,
+                    "mutating": true,
                     "final": false,
                     "returnType": {
                         "type": "Literal",
@@ -2228,6 +2261,254 @@
                     "mangled": "s.protocol_1f61b.1f64c-.t_0",
                     "genericParameters": [],
                     "documentation": " Whether this value and *other* are equal. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                }
+            ],
+            "initializers": [],
+            "typeMethods": []
+        },
+        {
+            "type": "Protocol",
+            "name": "📈",
+            "conformances": [],
+            "genericParameters": [
+                {
+                    "name": "T",
+                    "constraint": {
+                        "type": "Literal",
+                        "name": "⚪️"
+                    }
+                }
+            ],
+            "documentation": "\n  Protocol for numbers, which provide arithmetic and comparisons.\n\n  🔢, 💯 and 💧 conform to 📈 with themselves as T. Generic code can use a\n  generic parameter constrained to 📈 of itself, like `T 📈🐚T🍆`, to compute\n  with any of them:\n\n  ```\n  🐇❗️ 📐🐚T 📈🐚T🍆🍆 a T b T ➡️ T 🍇\n    ↩️ a ✖️ a ➕ b ✖️ b\n  🍉\n  ```\n\n  Such code is specialized for each type it is used with, so that it computes\n  as fast as code written for that type.\n",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "T"
+                    },
+                    "mood": "",
+                    "name": "➕",
+                    "mangled": "s.protocol_1f4c8.2795-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns the receiver plus *other*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "T"
+                    },
+                    "mood": "",
+                    "name": "➖",
+                    "mangled": "s.protocol_1f4c8.2796-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns the receiver minus *other*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "T"
+                    },
+                    "mood": "",
+                    "name": "✖",
+                    "mangled": "s.protocol_1f4c8.2716-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns the receiver multiplied by *other*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "T"
+                    },
+                    "mood": "",
+                    "name": "➗",
+                    "mangled": "s.protocol_1f4c8.2797-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns the receiver divided by *other*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "T"
+                    },
+                    "mood": "",
+                    "name": "🚮",
+                    "mangled": "s.protocol_1f4c8.1f6ae-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns the receiver modulus *other*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "👌",
+                        "arguments": []
+                    },
+                    "mood": "",
+                    "name": "◀",
+                    "mangled": "s.protocol_1f4c8.25c0-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns true if the receiver is smaller than *other*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "👌",
+                        "arguments": []
+                    },
+                    "mood": "",
+                    "name": "▶",
+                    "mangled": "s.protocol_1f4c8.25b6-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns true if the receiver is greater than *other*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "👌",
+                        "arguments": []
+                    },
+                    "mood": "",
+                    "name": "◀🙌",
+                    "mangled": "s.protocol_1f4c8.25c0_1f64c-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns true if the receiver is smaller than or equal to *other*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "other",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "👌",
+                        "arguments": []
+                    },
+                    "mood": "",
+                    "name": "▶🙌",
+                    "mangled": "s.protocol_1f4c8.25b6_1f64c-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Returns true if the receiver is greater than or equal to *other*. ",
                     "parameters": [
                         {
                             "type": {
@@ -2581,7 +2862,7 @@
                     ]
                 }
             ],
-            "final": false
+            "final": true
         },
         {
             "type": "Value Type",
@@ -2627,7 +2908,7 @@
                     "name": "🐽",
                     "mangled": "s.vt_23e9.1f43d-s.vt_1f522",
                     "genericParameters": [],
-                    "documentation": "\n    Returns the *n*th element of the range. *n* is only valid if\n    `start + step * n` is `>= start` and `< stop`. If *n* is invalid, the\n    program will panic.\n  ",
+                    "documentation": "\n    Returns the *n*th element of the range, `start + step * n`. *n* is only\n    valid if that is `>= start` and `< stop` (or `<= start` and `> stop` if\n    *step* is negative). If *n* is invalid, the program will panic.\n  ",
                     "parameters": [
                         {
                             "type": {
@@ -2664,14 +2945,8 @@
                     "final": false,
                     "returnType": {
                         "package": "s",
-                        "name": "🌳",
-                        "arguments": [
-                            {
-                                "package": "s",
-                                "name": "🔢",
-                                "arguments": []
-                            }
-                        ]
+                        "name": "👣",
+                        "arguments": []
                     },
                     "mood": "❗️",
                     "name": "🍡",
@@ -2690,7 +2965,7 @@
                     "name": "",
                     "mangled": "s.vt_23e9.init.1f195-s.vt_1f522-s.vt_1f522",
                     "genericParameters": [],
-                    "documentation": "\n    Creates a range from *start* to *stop*.\n  ",
+                    "documentation": "\n    Creates a range of the integers from *start* up to, but not including,\n    *stop*. The range is empty if *stop* is not greater than *start*; to count\n    down, provide a negative step.\n  ",
                     "parameters": [
                         {
                             "type": {
@@ -2747,6 +3022,127 @@
                                 "arguments": []
                             },
                             "name": "step",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "👣",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "🍡",
+                    "arguments": [
+                        {
+                            "package": "s",
+                            "name": "🔢",
+                            "arguments": []
+                        }
+                    ]
+                },
+                {
+                    "package": "s",
+                    "name": "🔂",
+                    "arguments": [
+                        {
+                            "package": "s",
+                            "name": "🔢",
+                            "arguments": []
+                        }
+                    ]
+                }
+            ],
+            "genericParameters": [],
+            "documentation": "\n  Iterator over a [[⏩]].\n\n  Being a value type whose methods are inlined, iterating a range with 🔂\n  compiles to a plain counting loop. Like other values, a copy of an iterator\n  is independent of it: iterating one copy does not advance the others.\n",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔽",
+                    "mangled": "s.vt_1f463.1f53d",
+                    "genericParameters": [],
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "👌",
+                        "arguments": []
+                    },
+                    "mood": "❓",
+                    "name": "🔽",
+                    "mangled": "s.vt_1f463.1f53d_intrg",
+                    "genericParameters": [],
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "👣",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🍡",
+                    "mangled": "s.vt_1f463.1f361",
+                    "genericParameters": [],
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "",
+                    "mangled": "s.vt_1f463.init.1f195-s.vt_1f522-s.vt_1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "start",
+                            "escaping": false
+                        },
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "step",
+                            "escaping": false
+                        },
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "count",
                             "escaping": false
                         }
                     ]
@@ -4185,6 +4581,47 @@
                 {
                     "accessLevel": "🔓",
                     "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🍨",
+                        "arguments": [
+                            {
+                                "type": "Literal",
+                                "name": "Element"
+                            }
+                        ]
+                    },
+                    "mood": "❗️",
+                    "name": "🔪",
+                    "mangled": "s.vt_1f368.1f52a-s.vt_1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": "\n    Returns a new list consisting of *length* elements beginning from\n    the element at index *from* in this list. Complexity: O(n).\n\n    For instance:\n\n    ```\n    🔪🍿0 1 2 3 4 5 6 7 8 9🍆 2 4❗ 💭 returns 🍿2 3 4 5🍆\n    🔪🍿0 1 2 3 4 5 6 7 8 9🍆 10 6❗ 💭 returns 🆕🍨🐚🔢🍆❗\n    🔪🍿0 1 2 3 4 5 6 7 8 9🍆 7 6❗ 💭 returns 🍿7 8 9🍆\n    ```\n  ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "from",
+                            "escaping": false
+                        },
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "length",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
                     "mutating": true,
                     "final": false,
                     "returnType": {
@@ -4194,7 +4631,7 @@
                     "name": "🦁",
                     "mangled": "s.vt_1f368.1f981-.callable_.t_0.t_0__s.vt_1f522",
                     "genericParameters": [],
-                    "documentation": "\n    Sorts this array in place using the quick sort algorithm.\n\n    `comparator` must return an integer less than, equal to, or greater than 0,\n    if the first argument is considered respectively less than, equal to, or\n    greater than the second.\n  ",
+                    "documentation": "\n    Sorts this array in place using the quick sort algorithm using the ordering specified by\n    `comparator`.\n\n    `comparator` must return an integer less than, equal to, or greater than 0,\n    if the first argument is considered respectively less than, equal to, or\n    greater than the second.\n\n    `comparator` must satisfy the following properties otherwise the result of the method call is undefined:\n    - For all `a`, `b` and `c` of type Element, if `⁉️ comparator a b❗️ ▶️ 0 🤝 ⁉️ comparator b c❗️ ▶️ 0` then\n      `⁉️ comparator a c❗️ ▶️ 0` (transitivity).\n    - For all `a` and `b` of type Element, `⁉️ comparator a b❗️ 🙌 🔋⁉️ comparator b a❗️❗️` (antisymmetry).\n  ",
                     "parameters": [
                         {
                             "type": {
@@ -4565,7 +5002,7 @@
                     "final": false,
                     "returnType": {
                         "package": "s",
-                        "name": "🌳",
+                        "name": "🎠",
                         "arguments": [
                             {
                                 "type": "Literal",
@@ -4676,6 +5113,125 @@
             "typeMethods": []
         },
         {
+            "type": "Value Type",
+            "name": "🎠",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "🍡",
+                    "arguments": [
+                        {
+                            "type": "Literal",
+                            "name": "Element"
+                        }
+                    ]
+                },
+                {
+                    "package": "s",
+                    "name": "🔂",
+                    "arguments": [
+                        {
+                            "type": "Literal",
+                            "name": "Element"
+                        }
+                    ]
+                }
+            ],
+            "genericParameters": [
+                {
+                    "name": "Element",
+                    "constraint": {
+                        "type": "Literal",
+                        "name": "⚪️"
+                    }
+                }
+            ],
+            "documentation": "\n  Iterator over a [[🍨]].\n\n  Being a value type whose methods are inlined, iterating a list with 🔂\n  compiles to a loop over the list's storage. Like other values, a copy of an\n  iterator is independent of it: iterating one copy does not advance the\n  others.\n",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "reference": true,
+                        "type": "Literal",
+                        "name": "Element"
+                    },
+                    "mood": "❗️",
+                    "name": "🔽",
+                    "mangled": "s.vt_1f3a0.1f53d",
+                    "genericParameters": [],
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "👌",
+                        "arguments": []
+                    },
+                    "mood": "❓",
+                    "name": "🔽",
+                    "mangled": "s.vt_1f3a0.1f53d_intrg",
+                    "genericParameters": [],
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🎠",
+                        "arguments": [
+                            {
+                                "type": "Literal",
+                                "name": "Element"
+                            }
+                        ]
+                    },
+                    "mood": "❗️",
+                    "name": "🍡",
+                    "mangled": "s.vt_1f3a0.1f361",
+                    "genericParameters": [],
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "",
+                    "mangled": "s.vt_1f3a0.init.1f195-s.vt_1f368",
+                    "genericParameters": [],
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🍨",
+                                "arguments": [
+                                    {
+                                        "type": "Literal",
+                                        "name": "Element"
+                                    }
+                                ]
+                            },
+                            "name": "list",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
             "type": "Class",
             "name": "🍦",
             "conformances": [
@@ -4754,7 +5310,7 @@
                     "final": false,
                     "returnType": {
                         "package": "s",
-                        "name": "🌳",
+                        "name": "🎠",
                         "arguments": [
                             {
                                 "type": "Literal",
@@ -5394,7 +5950,7 @@
             "name": "🧵",
             "conformances": [],
             "genericParameters": [],
-            "documentation": "\n  Execution thread of the program.\n",
+            "documentation": "\n  Execution thread of the program.\n\n  A thread that is deinitialized without having been joined with 🛂 keeps\n  running in the background. Such threads are terminated when the program\n  exits, even if they have not finished their work, so join a thread if its\n  work must be completed.\n",
             "methods": [
                 {
                     "accessLevel": "🔓",

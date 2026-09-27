@@ -1,5 +1,9 @@
 # Types and Namespaces
 
+>!N **AI-edited:** Parts of this page were written or revised by AI (Claude) to document changes in this fork of
+>!N Emojicode, and have not been fully reviewed by a human. If something here disagrees with the compiler, the
+>!N compiler is right.
+
 ## Namespaces
 
 Emojicode uses namespaces to avoid problems with equally named types. If you,
@@ -131,6 +135,28 @@ The following, for example, prints the size of an integer.
 ```
 😀 🔡 ⚖️🔢 ❗️❗️
 ```
+
+In generic code, the size of a generic parameter is the size of a value of the
+type the parameter stands for at run time. The following prints `8` for 🔢
+and `1` for 💧:
+
+```
+🕊 🧰 🍇
+  🐇❗️ 📐🐚T ⚪🍆 value T ➡️ 🔢 🍇
+    ↩️ ⚖️T
+  🍉
+🍉
+
+🏁 🍇
+  😀 🔡 📐🕊🧰 1❗️❗️❗️
+  😀 🔡 📐🕊🧰 💧1❗️❗️❗️❗️
+🍉
+```
+
+This is also how many bytes values of the parameter take up in memory, e.g.
+when written with 🧠’s 🐽. Types with [disabled generic
+dynamism](generics.html#disabling-generic-dynamism) cannot take the size of
+their generic parameters.
 
 ## Syntax
 

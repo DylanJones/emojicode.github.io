@@ -1,0 +1,2825 @@
+{
+    "documentation": "\n  The c package makes C types available to Emojicode for use with functions\n  and structs marked 🎍🌊. Import it into the namespace 🌊:\n\n  ```\n  📦 c 🌊\n  ```\n\n  s already provides C's `double` (💯), `bool` (👌), `int64_t` (🔢) and\n  `int8_t` (💧). This package adds the other C types, the pointer types\n  📍 and 🕳, and helpers to convert between 🔡 and C strings.\n",
+    "types": [
+        {
+            "type": "Value Type",
+            "name": "🔢",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `int`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f522.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f522.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f522.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f522.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f522.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f522.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f522.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🔢🔸🔼",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `unsigned int`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f522_1f538_1f53c.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f522_1f538_1f53c.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔢🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f522_1f538_1f53c.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔢🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f522_1f538_1f53c.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f522_1f538_1f53c.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f522_1f538_1f53c.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f522_1f538_1f53c.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🐁",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `short`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f401.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f401.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🐁",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f401.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🐁",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f401.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f401.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f401.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f401.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🐁🔸🔼",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `unsigned short`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f401_1f538_1f53c.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f401_1f538_1f53c.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🐁🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f401_1f538_1f53c.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🐁🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f401_1f538_1f53c.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f401_1f538_1f53c.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f401_1f538_1f53c.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f401_1f538_1f53c.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🐘",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `long`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f418.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f418.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🐘",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f418.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🐘",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f418.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f418.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f418.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f418.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🐘🔸🔼",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `unsigned long`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f418_1f538_1f53c.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f418_1f538_1f53c.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🐘🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f418_1f538_1f53c.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🐘🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f418_1f538_1f53c.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f418_1f538_1f53c.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f418_1f538_1f53c.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f418_1f538_1f53c.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🦕",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `long long`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f995.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f995.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🦕",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f995.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🦕",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f995.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f995.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f995.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f995.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🦕🔸🔼",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `unsigned long long`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f995_1f538_1f53c.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f995_1f538_1f53c.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🦕🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f995_1f538_1f53c.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🦕🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f995_1f538_1f53c.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f995_1f538_1f53c.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f995_1f538_1f53c.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f995_1f538_1f53c.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🔠",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `char`. Whether it is signed depends on the platform, as in C. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f520.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f520.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔠",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f520.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔠",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f520.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f520.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f520.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f520.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🔠🔸🔼",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `unsigned char`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f520_1f538_1f53c.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f520_1f538_1f53c.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔠🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f520_1f538_1f53c.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔠🔸🔼",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f520_1f538_1f53c.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f520_1f538_1f53c.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f520_1f538_1f53c.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f520_1f538_1f53c.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🔠🔸🔽",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `signed char`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f520_1f538_1f53d.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f520_1f538_1f53d.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔠🔸🔽",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f520_1f538_1f53d.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🔠🔸🔽",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f520_1f538_1f53d.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f520_1f538_1f53d.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f520_1f538_1f53d.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f520_1f538_1f53d.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "📏",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `size_t`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f4cf.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f4cf.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "📏",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f4cf.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "📏",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f4cf.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f4cf.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f4cf.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f4cf.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "📐",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `ssize_t`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f4d0.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f4d0.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "📐",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_1f4d0.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "📐",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f4d0.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f4d0.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f4d0.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f4d0.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "⏰",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `time_t`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_23f0.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_23f0.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "⏰",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "❎",
+                    "mangled": "c.vt_23f0.274e",
+                    "genericParameters": [],
+                    "documentation": " Returns the bitwise complement. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "⏰",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_23f0.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_23f0.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value in base 10. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_23f0.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_23f0.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to this type as C would. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🎈",
+            "conformances": [
+                {
+                    "package": "s",
+                    "name": "↘🔸🔡",
+                    "arguments": []
+                }
+            ],
+            "genericParameters": [],
+            "documentation": " C `float`. ",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f388.1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 🔢, rounding toward zero. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "💯",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "💯",
+                    "mangled": "c.vt_1f388.1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts this value to 💯. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🎈",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔋",
+                    "mangled": "c.vt_1f388.1f50b",
+                    "genericParameters": [],
+                    "documentation": " Returns the negation. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f388.1f521",
+                    "genericParameters": [],
+                    "documentation": " The value as a decimal. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f388.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to a float. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "name": "💯",
+                    "mangled": "c.vt_1f388.init.1f4af-s.vt_1f4af",
+                    "genericParameters": [],
+                    "documentation": " Converts *value* to a float. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "💯",
+                                "arguments": []
+                            },
+                            "name": "value",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🕳",
+            "conformances": [],
+            "genericParameters": [],
+            "documentation": "\n  C `void *`, an address without a type.\n\n  🕳 is not managed: Neither the memory it points to nor the objects stored\n  there are retained or released.\n\n  Use 🍬🕳 for pointers that can be `NULL`.\n",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f573.1f522",
+                    "genericParameters": [],
+                    "documentation": " The numeric address. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "📍",
+                        "arguments": [
+                            {
+                                "type": "Literal",
+                                "name": "T"
+                            }
+                        ]
+                    },
+                    "mood": "❗️",
+                    "name": "📍",
+                    "mangled": "c.vt_1f573.1f4cd",
+                    "genericParameters": [
+                        {
+                            "name": "T",
+                            "constraint": {
+                                "type": "Literal",
+                                "name": "⚪️"
+                            }
+                        }
+                    ],
+                    "documentation": " This pointer as a pointer to T. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "T"
+                    },
+                    "mood": "❗️",
+                    "name": "📥",
+                    "mangled": "c.vt_1f573.1f4e5",
+                    "genericParameters": [
+                        {
+                            "name": "T",
+                            "constraint": {
+                                "type": "Literal",
+                                "name": "🔵"
+                            }
+                        }
+                    ],
+                    "documentation": "\n    Takes back the object passed to C with ▶️📤, releasing the reference ▶️📤\n    retained.\n\n    >!H The pointer must have been created with ▶️📤 from an object of type T\n    >!H and must not be used afterwards.\n  ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "T"
+                    },
+                    "mood": "❗️",
+                    "name": "👀",
+                    "mangled": "c.vt_1f573.1f440",
+                    "genericParameters": [
+                        {
+                            "name": "T",
+                            "constraint": {
+                                "type": "Literal",
+                                "name": "🔵"
+                            }
+                        }
+                    ],
+                    "documentation": "\n    Returns the object passed to C with ▶️📤 without taking over the\n    reference, e.g. in a callback that may run several times.\n\n    >!H The pointer must have been created with ▶️📤 from an object of type T,\n    >!H and 📥 must not have been called on it yet.\n  ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f573.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Creates a pointer from the numeric address *address*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "address",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🧠",
+                    "mangled": "c.vt_1f573.init.1f9e0-s.vt_1f9e0",
+                    "genericParameters": [],
+                    "documentation": "\n    The address of the first byte of *memory*.\n\n    >!H The pointer is only valid for as long as *memory* is alive.\n  ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🧠",
+                                "arguments": []
+                            },
+                            "name": "memory",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "name": "📤",
+                    "mangled": "c.vt_1f573.init.1f4e4-.someobject",
+                    "genericParameters": [],
+                    "documentation": "\n    Retains *object* and returns its address, to pass it to C code as user data.\n\n    Balance every call with 📥 on the pointer, or the object is leaked.\n  ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "🔵"
+                            },
+                            "name": "object",
+                            "escaping": true
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "📍",
+            "conformances": [],
+            "genericParameters": [
+                {
+                    "name": "T",
+                    "constraint": {
+                        "type": "Literal",
+                        "name": "⚪️"
+                    }
+                }
+            ],
+            "documentation": "\n  C `T *`, the address of a value of type T.\n\n  📍 is not managed: Neither the memory it points to nor the values stored\n  there are retained or released. Use 🍬📍 for pointers that can be `NULL`.\n",
+            "methods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "T"
+                    },
+                    "mood": "❗️",
+                    "name": "🐽",
+                    "mangled": "c.vt_1f4cd.1f43d",
+                    "genericParameters": [],
+                    "documentation": " The value this pointer points to. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "type": "NoReturn"
+                    },
+                    "mood": "➡️",
+                    "name": "🐽",
+                    "mangled": "c.vt_1f4cd.1f43d_assign-.t_0",
+                    "genericParameters": [],
+                    "documentation": " Stores *value* where this pointer points. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Literal",
+                                "name": "T"
+                            },
+                            "name": "value",
+                            "escaping": true
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "📍",
+                        "arguments": [
+                            {
+                                "type": "Literal",
+                                "name": "T"
+                            }
+                        ]
+                    },
+                    "mood": "❗️",
+                    "name": "⏭",
+                    "mangled": "c.vt_1f4cd.23ed-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": "\n    The pointer *count* values of type T further, like `pointer + count` in\n    C.\n  ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "count",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔢",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔢",
+                    "mangled": "c.vt_1f4cd.1f522",
+                    "genericParameters": [],
+                    "documentation": " The numeric address. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🕳",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🕳",
+                    "mangled": "c.vt_1f4cd.1f573",
+                    "genericParameters": [],
+                    "documentation": " This pointer as 🕳. ",
+                    "parameters": []
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": false,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "📍",
+                        "arguments": [
+                            {
+                                "type": "Literal",
+                                "name": "U"
+                            }
+                        ]
+                    },
+                    "mood": "❗️",
+                    "name": "🎭",
+                    "mangled": "c.vt_1f4cd.1f3ad",
+                    "genericParameters": [
+                        {
+                            "name": "U",
+                            "constraint": {
+                                "type": "Literal",
+                                "name": "⚪️"
+                            }
+                        }
+                    ],
+                    "documentation": " This pointer as a pointer to U. ",
+                    "parameters": []
+                }
+            ],
+            "initializers": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🔢",
+                    "mangled": "c.vt_1f4cd.init.1f522-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": " Creates a pointer from the numeric address *address*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "address",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "name": "🧠",
+                    "mangled": "c.vt_1f4cd.init.1f9e0-s.vt_1f9e0",
+                    "genericParameters": [],
+                    "documentation": "\n    The address of the first byte of *memory*.\n\n    >!H The pointer is only valid for as long as *memory* is alive.\n  ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🧠",
+                                "arguments": []
+                            },
+                            "name": "memory",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ],
+            "typeMethods": []
+        },
+        {
+            "type": "Value Type",
+            "name": "🔧",
+            "conformances": [],
+            "genericParameters": [],
+            "documentation": "\n  Functions of the C standard library that the rest of this package needs.\n",
+            "methods": [],
+            "initializers": [],
+            "typeMethods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "type": "Optional",
+                        "arguments": [
+                            {
+                                "package": "c",
+                                "name": "🕳",
+                                "arguments": []
+                            }
+                        ]
+                    },
+                    "mood": "❗️",
+                    "name": "🛒",
+                    "mangled": "c.vt_1f527.type.1f6d2-c.vt_1f4cf",
+                    "genericParameters": [],
+                    "documentation": " `malloc`: Allocates *size* bytes. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "c",
+                                "name": "📏",
+                                "arguments": []
+                            },
+                            "name": "size",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "type": "NoReturn"
+                    },
+                    "mood": "❗️",
+                    "name": "🗑",
+                    "mangled": "c.vt_1f527.type.1f5d1-.op_c.vt_1f573",
+                    "genericParameters": [],
+                    "documentation": " `free`: Frees memory allocated with 🛒. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "type": "Optional",
+                                "arguments": [
+                                    {
+                                        "package": "c",
+                                        "name": "🕳",
+                                        "arguments": []
+                                    }
+                                ]
+                            },
+                            "name": "pointer",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "🕳",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "📋",
+                    "mangled": "c.vt_1f527.type.1f4cb-c.vt_1f573-c.vt_1f573-c.vt_1f4cf",
+                    "genericParameters": [],
+                    "documentation": " `memcpy`: Copies *size* bytes from *source* to *destination*. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "c",
+                                "name": "🕳",
+                                "arguments": []
+                            },
+                            "name": "destination",
+                            "escaping": false
+                        },
+                        {
+                            "type": {
+                                "package": "c",
+                                "name": "🕳",
+                                "arguments": []
+                            },
+                            "name": "source",
+                            "escaping": false
+                        },
+                        {
+                            "type": {
+                                "package": "c",
+                                "name": "📏",
+                                "arguments": []
+                            },
+                            "name": "size",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "package": "c",
+                        "name": "📏",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "📏",
+                    "mangled": "c.vt_1f527.type.1f4cf-c.vt_1f4cd",
+                    "genericParameters": [],
+                    "documentation": " `strlen`: The number of bytes before the first 0 byte. ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "c",
+                                "name": "📍",
+                                "arguments": [
+                                    {
+                                        "package": "c",
+                                        "name": "🔠",
+                                        "arguments": []
+                                    }
+                                ]
+                            },
+                            "name": "string",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Value Type",
+            "name": "🧶",
+            "conformances": [],
+            "genericParameters": [],
+            "documentation": "\n  Converts between 🔡 and C strings, which are pointers to 🔠 that end with a\n  0 byte.\n",
+            "methods": [],
+            "initializers": [],
+            "typeMethods": [
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f9f6.type.1f521-c.vt_1f4cd",
+                    "genericParameters": [],
+                    "documentation": "\n    Copies the NUL-terminated C string at *string* into a new 🔡.\n\n    >!H *string* must point to a NUL-terminated string. It is interpreted as\n    >!H UTF-8.\n  ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "c",
+                                "name": "📍",
+                                "arguments": [
+                                    {
+                                        "package": "c",
+                                        "name": "🔠",
+                                        "arguments": []
+                                    }
+                                ]
+                            },
+                            "name": "string",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": true,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "package": "s",
+                        "name": "🔡",
+                        "arguments": []
+                    },
+                    "mood": "❗️",
+                    "name": "🔡",
+                    "mangled": "c.vt_1f9f6.type.1f521-c.vt_1f4cd-s.vt_1f522",
+                    "genericParameters": [],
+                    "documentation": "\n    Copies *count* bytes at *string* into a new 🔡.\n\n    >!H *string* must point to at least *count* bytes of UTF-8.\n  ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "c",
+                                "name": "📍",
+                                "arguments": [
+                                    {
+                                        "package": "c",
+                                        "name": "🔠",
+                                        "arguments": []
+                                    }
+                                ]
+                            },
+                            "name": "string",
+                            "escaping": false
+                        },
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔢",
+                                "arguments": []
+                            },
+                            "name": "count",
+                            "escaping": false
+                        }
+                    ]
+                },
+                {
+                    "accessLevel": "🔓",
+                    "unsafe": false,
+                    "mutating": true,
+                    "final": false,
+                    "returnType": {
+                        "type": "Literal",
+                        "name": "R"
+                    },
+                    "mood": "❗️",
+                    "name": "🧶",
+                    "mangled": "c.vt_1f9f6.type.1f9f6-s.class_1f521-.callable_c.vt_1f4cd__.l_0",
+                    "genericParameters": [
+                        {
+                            "name": "R",
+                            "constraint": {
+                                "type": "Literal",
+                                "name": "⚪️"
+                            }
+                        }
+                    ],
+                    "documentation": "\n    Calls *body* with a NUL-terminated copy of *string* and returns what\n    *body* returns.\n\n    >!H The pointer is only valid while *body* runs.\n  ",
+                    "parameters": [
+                        {
+                            "type": {
+                                "package": "s",
+                                "name": "🔡",
+                                "arguments": []
+                            },
+                            "name": "string",
+                            "escaping": false
+                        },
+                        {
+                            "type": {
+                                "type": "Callable",
+                                "parameters": [
+                                    {
+                                        "package": "c",
+                                        "name": "📍",
+                                        "arguments": [
+                                            {
+                                                "package": "c",
+                                                "name": "🔠",
+                                                "arguments": []
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "return": {
+                                    "type": "Literal",
+                                    "name": "R"
+                                }
+                            },
+                            "name": "body",
+                            "escaping": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
